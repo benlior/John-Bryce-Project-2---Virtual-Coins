@@ -1,0 +1,190 @@
+/* mobile */
+
+@media only screen and (max-width: 700px) {
+  #search-input {
+    width: 50%;
+    margin-right: 15px;
+  }
+  form {
+    float: left !important;
+  }
+  #titleImg {
+    display: none;
+  }
+  .progress {
+    height: 50px !important;
+  }
+  .progress img {
+    height: 100% !important;
+  }
+  .coin-name {
+    height: 35px;
+  }
+  .card-img-top {
+    width: 100% !important;
+  }
+  #about-card {
+    width: 100% !important;
+  }
+  #search-line {
+    margin-bottom: -17px;
+  }
+}
+
+/* mobile end */
+
+/* Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #titleImg {
+    width: 50%;
+    height: auto;
+  }
+  button {
+    margin-right: 15px;
+  }
+  .progress {
+    height: 88px !important;
+  }
+  .progress img {
+    height: 100% !important;
+  }
+
+  .coin-name {
+    height: 35px;
+  }
+  .card-img-top {
+    width: 25% !important;
+  }
+}
+
+/* ipad end */
+
+nav {
+  margin: -16px -15px 0px -15px;
+}
+nav li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.activeNav,
+nav li:hover {
+  background-color: black;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+
+form {
+  float: right;
+}
+
+#titleImg {
+  width: 25%;
+  height: auto;
+  float: right;
+}
+
+h1 {
+  float: left;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.progress {
+  height: 20%;
+  position: fixed;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.progress img {
+  display: block;
+  margin: auto;
+}
+
+#report-display {
+  display: none;
+}
+
+#about-display {
+  display: none;
+}
+
+.card p {
+  margin-top: 5px;
+}
+
+.card-img-top {
+  width: 25%;
+  margin-top: 15px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* toggle button CSS */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

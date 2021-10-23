@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Cryptonite</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="scripts/canvas.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="progress">
+        <img class="mx-auto" src="images/loading.gif">
+    </div>
+    <div class="container-fluid">
+        <header>
+            <div class="row">
+                <div class="col">
+                    <h1 class="mt-4">Cryptonite</h1>
+                </div>
+                <div class="col">
+                    <img id="titleImg" src="images/title.jpg" />
+                </div>
+            </div>
+        </header>
+        <hr>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="col-12 col-sm-6">
+                <ul class="navbar-nav d-inline">
+                    <li id="home" class="nav-item active activeNav">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li id="live-reports" class="nav-item">
+                        <a class="nav-link" href="#">Live Reports</a>
+                    </li>
+                    <li id="about" class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="search-line" class="col-12 col-sm-6">
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button id="search-button" class="btn btn-outline-light my-2 my-sm-0" type="button">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <main>
+            <div id="coin-display" class="row"></div>
+            <div id="report-display"></div>
+            <div id="about-display" class="mx-auto">
+                <div id="about-card" class="card mt-4">
+                    <img class="card-img-top mx-auto" src="images/me.jpg" alt="Card image">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Lior Ben</h4>
+                        <p class="card-text">I am a full stack web development student at John Bryce
+                            <hr>
+                            The aim of this project is to provide real-time information regarding virtual coin values.<br>
+                            Upon entering the page, an Ajax request is sent to retrieve all virtual coins.<br>
+                            Clicking "Live Reports" after adding a coin shows a real-time coin value chart.<br> 
+                            This is updated every 2 seconds by sending an Ajax request and adding the new value to the chart.<br>
+                            Clicking "More Info" obtains additional coin information via Ajax and adds it to the local storage, along with the click time. 
+                            If 2 minutes have not yet passed since the last click - the information will be drawn from the local storage. 
+                            Otherwise, a new Ajax request will be sent and overwrite the saved information in the local storage.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="search-display">
+            </div>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-auto text-center" id="exampleModalLabel">More than 5 coins selected,<br>Please remove a coin:</h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button id="modalCancel" type="button" class="btn btn-dark mx-auto">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
